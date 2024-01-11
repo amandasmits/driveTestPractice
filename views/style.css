@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+
+body{
+    background-image: url("./Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Garamond, serif;
+}
+
+.header{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Carattere', serif;
+    font-size: 25px;
+}
+
+.divheader{
+    border-width: 3px; 
+    border-style:solid;
+    border-color:lightpink; 
+    border-radius: 15px;
+    background-image: url("./Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo{
+    font-size: 40px;
+}
+
+.right{
+    text-align: right;
+}

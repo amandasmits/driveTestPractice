@@ -1,0 +1,20 @@
+html
+    head 
+        title Test Questions
+        link(rel="icon", href="./CastleButton.png", type="image/x-icon")
+        style   
+            include ./style.css  
+        script(src = "TestQuestions.js")
+
+    body 
+        h1 Official Princess Patrick Driving Test 
+        each q in questions 
+            p #{q.question}
+            each a in q.answers 
+                label 
+                    input(type = "radio", id = q.question + a[0], name = q) 
+                    span #{a}
+                br 
+            br
+        input(type = "button", value = "Submit Quiz", onclick = "submit()")
+

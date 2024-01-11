@@ -1,0 +1,25 @@
+html
+    head 
+        title Home
+        link(rel="icon", href="./CastleButton.png", type="image/x-icon")
+        style   
+            include ./style.css 
+
+    body 
+        h1 Great work princess!
+        br
+        p Let's review your results 
+        br 
+        h3 You got #{correct} questions right!!! Not bad for someone who probably can't even see well enough to drive
+        br
+        h3 You got #{incorrect.length} questions wrong, to quote Doc Hudson "I knew you couldn't drive, I didn't know you couldn't read." 
+        br
+        p Questions to practice:
+        each mistake in incorrect 
+            p #{mistake}
+        p Disclaimer: The quotes on this webpage are comedic and in no way reflect real opinions of people's driving ability 
+        br
+        p Please direct all complaints and irritation to Emma Smits 
+        br
+        p It is very possible to get 100% on this test, no yapping will be tolerated
+    
