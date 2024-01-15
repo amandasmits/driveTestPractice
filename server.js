@@ -77,6 +77,22 @@ app.post("/SubmitTest", function(req,res){
         //send question, answer, correctanswer in an array to the pug file and send that HTML as a response 
 });
 
+const renderPracticeQuestionLandingPage = pug.compileFile("views/PracticeQuestionLandingPage.pug")
+app.get("/PracticeQuestionLandingPage", function(req,res){
+    let data = renderPracticeQuestionLandingPage();
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/html");
+    res.end(data);    
+})
+
+const renderPracticeQuestions = pug.compileFile("views/PracticeQuestions.pug");
+app.get("/PracticeQuestions", function(req,res){
+    //this function will need to get a list of all of the questions in the database so it can be iterated through
+    let data = renderPracticeQuestions();
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/html");
+    res.end(data);   
+})
 
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
