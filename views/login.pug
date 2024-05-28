@@ -1,0 +1,26 @@
+html
+    head 
+        link(rel="icon", href="public\\favicon.ico", type="image/x-icon")
+        title Login
+        script(src = "login.js")
+        
+        style   
+            include ./loginstyle.css  
+
+    body 
+        div.container
+            div.left
+                h1 Welcome to Princess Patrick driving school! 
+                br
+                p.title Username
+                input.inputbox(type = "textbox", id = "username", placeholder = "Enter your username")
+                br
+                p.title Password 
+                input.inputbox(type = "password", id = "password", placeholder = "Enter your password")
+                br
+                p.title  
+                button.login(type = "button", id = "login", onclick = "login()") Log In
+                br
+                p Not a user yet? Click below to sign up!
+                a(href = "/newuser") Create a new account
+            div.right 

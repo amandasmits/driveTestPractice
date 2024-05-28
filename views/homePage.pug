@@ -1,7 +1,8 @@
 html
     head 
         title Home
-        link(rel="icon", href="./CastleButton.png", type="image/x-icon")
+        link(rel="icon", href="C:\Users\jla_s\driveTestPractice\DrivetestPractice2\public\CastleButton.png", type="image/x-icon")
+        include favicon
         style   
             include ./style.css  
 
@@ -12,6 +13,8 @@ html
         br
         p Please choose an option below to proceed
         br
-        a(href = "/PracticeQuestionLandingPage") Practice all of the questions
+        button(class = "homePageButton")
+            a(href = "/PracticeQuestionLandingPage", class = "hiddenLink") Practice all of the questions
         br
-        a(href = "/Test") Do a practice version of the test
+        button(class = "homePageButton")
+            a(href = "/Test", class = "hiddenLink") Do a practice version of the test

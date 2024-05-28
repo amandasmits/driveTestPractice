@@ -33,3 +33,27 @@ body{
 .right{
     text-align: right;
 }
+
+.answer:hover{
+    border-color: hotpink;
+}
+
+.homePageButton{
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color:whitesmoke;
+    color: #fff; /* White text color, change as needed */
+    border: 2px;
+    border-color: hotpink;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hiddenLink{
+    color: rgb(199, 8, 103); 
+    text-decoration: none; 
+    cursor: pointer; 
+}
+

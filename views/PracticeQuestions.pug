@@ -3,18 +3,30 @@ html
         -// This page should take a question from the database as input and display it, and proceed to the next or previous quesiton
         -// when the next or previous buttons are pressed 
         title Practice Question
-        script(src= "PracticeQuestions.js")
         link(rel="icon", href="./CastleButton.png", type="image/x-icon")
+        script(src = "PracticeQuestions.js")
         style   
             include ./style.css  
 
-    body 
-        h1 Questions #insert the question from the database here 
+    body     
+        p#question
 
-
-        p Insert answers here
-
-        input(type = button, id="nextbutton", onclick = "next()", value = "Next")
+        button#answer1(class = "answer", onclick = "verify('A')")
+        br 
+        button#answer2(class = "answer", onclick = "verify('B')") 
         br
-        input(type = button, id = "prevbutton", onclick = "prev()", value = "Previous")
-    
+        button#answer3(class = "answer", onclick = "verify('C')") 
+        br
+        button#answer4(class = "answer", onclick = "verify('D')") 
+
+        br
+        button#back Back
+        button#next Next
+        br
+        a(style = "display:none", href = "/QuestionsComplete", id = "complete") You did it! Click here to celebrate
+
+        br 
+        a(href = "/") Go back to home
+
+
+        #questionsdata(style="display:none") = #{questions} 

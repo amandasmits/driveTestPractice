@@ -1,0 +1,33 @@
+html
+    head 
+        title New User!
+        script(src = "newUser.js")
+        link(rel="icon", href="./CastleButton.png", type="image/x-icon")
+        style   
+            include ./style.css  
+
+    body 
+        h1 Become a princess!
+        br
+        p Please enter your new login information below 
+        br
+        input(type = "textbox", id = "newusername", placeholder = "Username")
+        br
+        input(type = "password", id = "newpassword", placeholder = "Password")
+        br
+        input(type = "checkbox", id = "showpassword" onclick = "show()")
+        label(for = "showpassword") Show password
+        br
+        button(type = 'button', id = "save", onclick = "save()") Save new user 
+
+        a(href = "/") Go back to login page
+
+        script.
+            function show(){
+                let pw = document.getElementById("newpassword");
+                if (pw.type ==="password"){
+                    pw.type = "text";
+                } else {
+                    pw.type = "password";
+                };
+            };
